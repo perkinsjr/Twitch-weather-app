@@ -1,0 +1,51 @@
+<%include partials/header %> <% if (!error){ %>
+<div class="m-auto max-w-sm rounded overflow-hidden shadow-2xl">
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2 text-center">
+      Weather In <%= name%>
+    </div>
+    <div class="mb-2 text-center">
+      Current weather description: <%= description %>
+    </div>
+    <img class="mx-auto" src="<%= icon %>" alt="Weather Icon" />
+    <div class="px-6 py-4">
+      <span
+        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-small font-semibold text-gray-700 mr-2 my-1"
+        >Temp: <%= temp%> F</span
+      >
+      <span
+        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-small font-semibold text-gray-700 mr-2 my-1"
+        >Feels Like: <%= feels_like%> F</span
+      >
+      <span
+        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-small font-semibold text-gray-700 mr-2 my-1"
+        >Humidity: <%= humidity%> %</span
+      >
+      <span
+        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-small font-semibold text-gray-700 mr-2 my-1"
+        >Wind: <%= wind%> mph</span
+      >
+    </div>
+  </div>
+</div>
+<%} else { %>
+<div class="m-auto max-w-sm rounded overflow-hidden shadow-2xl">
+  <img class="w-full" src="/images/noweather.png" />
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2 text-center">
+      Sorry! No Weather was found.
+    </div>
+  </div>
+</div>
+<% }%>
+<div class="m-auto max-w-sm">
+  <div class="px-6 py-4">
+    <a
+      href="/"
+      class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-6 border border-blue-500 hover: border-transparent rounded"
+      >Check again</a
+    >
+  </div>
+</div>
+
+<%include partials/footer %>

@@ -1,0 +1,19 @@
+<% include partials/header %>
+<form action="/weather" method="POST" class="w-full max-w-sm m-auto">
+  <div class="flex items-center border-b border-b2 border-blue-500 py-2">
+    <input
+      type="text"
+      placeholder="Enter your zipcode"
+      aria-label="location"
+      name="location"
+      class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+    />
+    <button
+      class="flex-shrink-0 bg-blue-500 border-blue-500 hover:bg-blue-700 hover:border-blue-700 text-sm text-white border-4 py-1 px-2 rounded"
+      type="submit"
+    >
+      Get Weather
+    </button>
+  </div>
+</form>
+<%include partials/footer %>
